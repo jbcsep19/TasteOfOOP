@@ -1,13 +1,14 @@
 package com.company;
 
 public class Person {
-    private String name;
+
+    private String name; // variables
     private int age;
 
-    public Person() {
+    public Person() { // no-arg constructor
     }
 
-    public Person(String name, int age) {
+    public Person(String name, int age) { // two-arg constructor
         this.name = name;
         this.age = age;
     }
@@ -27,4 +28,12 @@ public class Person {
     public void setAge(int age) {
         this.age = age;
     }
+
+    @Override // annotation as a cue to the developers
+    public String toString(){
+        String temp = "";
+        temp = "The person's name is " + getName() + " and their age is " + getAge();
+        return temp;
+    }
+
 }
